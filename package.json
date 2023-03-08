@@ -1,0 +1,25 @@
+{
+  "name": "msc-2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass src/assets/style:assets/style --watch",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "start": "npm run watch:eleventy & npm run watch:sass",
+    "deploy": "npm run build && git subtree push --prefix _site origin gh-pages"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  },
+  "dependencies": {
+    "markdown-it-anchor": "^8.6.7",
+    "sass": "^1.58.3"
+  }
+}
