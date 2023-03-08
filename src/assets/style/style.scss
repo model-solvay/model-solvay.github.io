@@ -15,6 +15,11 @@ body {
   color: var(--darktextcol);
 }
 
+main {
+  padding-top: 20vh;
+  min-height: 70vh;
+}
+
 #welcome {
   margin-top: 25vh;
   height: 80vh;
@@ -23,7 +28,7 @@ body {
 }
 
 footer {
-  background-image: url('../../assets/img/nav-bg.jpg');
+  background-image: url('/assets/img/star-scatter.svg');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -85,7 +90,7 @@ footer {
 
   &.shrink {
     height: 10vh;
-    background-image: url('../img/nav-bg.jpg');
+    background-image: url('/assets/img/header-bg.svg');
     background-size: cover;
   }
 }
@@ -288,4 +293,26 @@ footer {
   #div-3 {
     width: 30vw;
   }
+}
+
+h1 {
+  font-size: 2.5em;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  font-feature-settings: 'smcp';
+}
+
+h2 {
+  font-size: 2em;
+  padding: 12px;
+  border-bottom: 2px solid var(--accent-col);
+  margin: 12px;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding: 7px;
+  background-color: var(--accent-col-light);
+  border-radius: var(--border-radius);
 }

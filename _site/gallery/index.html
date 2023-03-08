@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>🏠 Home</title>
+        <title>Gallery</title>
         <meta name="description" content="">
-        <link rel="canonical" href="/"/>
+        <link rel="canonical" href="/gallery/"/>
         <meta name="robots" content="index, follow"/>
-        <meta property="og:title" content="🏠 Home"/>
-        <meta property="og:url" content="/"/>
+        <meta property="og:title" content="Gallery"/>
+        <meta property="og:url" content="/gallery/"/>
         <meta property="og:description" content=""/>
         <meta property="og:image" content="/assets/img/mylogo.png"/>
         <meta property="og:type" content="article"/>
@@ -25,7 +25,7 @@
         <header>
                 <nav class="navbar">
     <div class="navbar-logo">
-        <h1 class="navbar-logo-text">Model Solvay Conference 2023</h1>/
+        <h1 class="navbar-logo-text">Model Solvay Conference 2023</h1>/gallery/
     </div>
     <div class="navbar-menu">
         <div class="choice-list">
@@ -53,8 +53,88 @@
         </header>
         <main  class="tmpl-home" >
             
-<h1>Hello</h1>
-Welcome to model solvay
+<style>
+    * { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+    margin-top: 10vh;
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+
+p {
+    text-align: center;
+    }
+</style>
+<script src="/assets/js/masonry.pkgd.js"></script>
+<script src="/assets/js/imagesloaded.pkgd.js"></script>
+<h1>MSC - 2021 (remote)</h1>
+<p>
+    2021 was online but thanks to the MSC core team for organizing such a wonderful event regardless of the constraints.
+</p>
+<div class="grid" style="background-color: black;">
+    <div class="grid-sizer"></div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img1.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img2.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img3.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img4.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img5.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img6.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img7.png" />
+    </div>
+</div>
+<script>
+var $grid = $('.grid').imagesLoaded(function() {
+  $grid.masonry({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    columnWidth: '.grid-sizer'
+  }); 
+});
+</script>
+
 
         </main>
         <footer>

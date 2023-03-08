@@ -1,0 +1,86 @@
+---
+layout: layouts/home.njk
+title: Gallery
+tags: main
+---
+<style>
+    * { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+    margin-top: 10vh;
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+
+p {
+    text-align: center;
+    }
+</style>
+<script src="{{ '/assets/js/masonry.pkgd.js' | url }}"></script>
+<script src="{{ '/assets/js/imagesloaded.pkgd.js' | url }}"></script>
+<h1>MSC - 2021 (remote)</h1>
+<p>
+    2021 was online but thanks to the MSC core team for organizing such a wonderful event regardless of the constraints.
+</p>
+<div class="grid" style="background-color: black;">
+    <div class="grid-sizer"></div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img1.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img2.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img3.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img4.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img5.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img6.png" />
+    </div>
+    <div class="grid-item">
+        <img src="/assets/img/msc2021/img7.png" />
+    </div>
+</div>
+<script>
+var $grid = $('.grid').imagesLoaded(function() {
+  $grid.masonry({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    columnWidth: '.grid-sizer'
+  }); 
+});
+</script>
