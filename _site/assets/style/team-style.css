@@ -1,0 +1,25 @@
+#team-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#team-container > .team-element {
+  background-color: var(--accent-1);
+  border-radius: 12px;
+  padding: 5px;
+  margin: 10px;
+}
+#team-container > .team-element > .team-img > img {
+  border-radius: 8px;
+  height: 50vh;
+}
+#team-container > .team-element > .details {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

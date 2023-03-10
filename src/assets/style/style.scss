@@ -35,21 +35,35 @@ footer {
 
 #footer-content {
   margin-top: 20vh;
+  padding-top: 5vh;
   height: 50vh;
   width: 100vw;
   display: flex;
+  font-size: 25px;
+
   >div {
     // border: 1px solid white;
+    text-align: center;
     padding: 20px 8px;
   }
 
   #social-holder {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+    }
   }
 }
 
+footer .footimg {
+  > img {
+    max-width: 95%;
+    max-height: 40vh;
+  }
+}
 #archive {
   margin-top: 10vh;
   display: flex;
@@ -138,24 +152,6 @@ footer {
   }
 }
 
-// .navbar-menu ul {
-//   display: flex;
-//   list-style: none;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .navbar-menu li {
-//   margin: 0 10px;
-// }
-
-// .navbar-menu li a {
-//   font-size: 16px;
-//   font-weight: bold;
-//   text-decoration: none;
-//   color: #fff;
-// }
-
 .navbar-toggle {
   display: none;
   cursor: pointer;
@@ -179,6 +175,15 @@ footer {
   justify-content: start;
 }
 
+.main-text {
+  padding: 10vh;
+  font-size: 24px;
+
+  >p {
+    margin: 10px;
+  }
+}
+
 .btn-glow {
   background-color: var(--accent-1);
   padding: 10px 15px;
@@ -194,8 +199,9 @@ footer {
 .social {
   // background-color: var(--accent-1);
   // color: black;
-  width: 100px;
+  width: 170px;
   // padding: 5px;
+  font-size: 20px;
   margin: 5px;
   border-radius: 12px;
   // height: 80px;
@@ -205,6 +211,10 @@ footer {
 
   >i {
     font-size: 40px;
+  }
+
+  >i, span {
+    vertical-align: middle;
   }
 
   // &:hover {}
@@ -277,6 +287,11 @@ footer {
         text-align: center;
       }
     }
+  }
+
+  .main-text {
+    padding: 2vh;
+    font-size: 24px;
   }
 }
 

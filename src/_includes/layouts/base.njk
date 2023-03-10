@@ -28,8 +28,6 @@
         <main {% if templateClass %} class="{{ templateClass }}" {% endif %}>
             {{ content | safe }}
         </main>
-        <footer>
             {% include 'footer.njk' %}
-        </footer>
     </body>
 </html>
