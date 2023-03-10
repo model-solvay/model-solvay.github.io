@@ -35,17 +35,29 @@ footer {
 
 #footer-content {
   margin-top: 20vh;
+  padding-top: 5vh;
   height: 50vh;
   width: 100vw;
   display: flex;
+  font-size: 25px;
 }
 #footer-content > div {
+  text-align: center;
   padding: 20px 8px;
 }
 #footer-content #social-holder {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#footer-content #social-holder a {
+  text-decoration: none;
+}
+
+footer .footimg > img {
+  max-width: 95%;
+  max-height: 40vh;
 }
 
 #archive {
@@ -147,6 +159,14 @@ footer {
   transition: 0.5s;
 }
 
+.main-text {
+  padding: 10vh;
+  font-size: 24px;
+}
+.main-text > p {
+  margin: 10px;
+}
+
 .btn-glow {
   background-color: var(--accent-1);
   padding: 10px 15px;
@@ -158,7 +178,8 @@ footer {
 }
 
 .social {
-  width: 100px;
+  width: 170px;
+  font-size: 20px;
   margin: 5px;
   border-radius: 12px;
   text-align: center;
@@ -166,6 +187,9 @@ footer {
 }
 .social > i {
   font-size: 40px;
+}
+.social > i, .social span {
+  vertical-align: middle;
 }
 
 @media (max-width: 768px) {
@@ -222,6 +246,10 @@ footer {
   .navbar-menu.active div {
     margin: 10px;
     text-align: center;
+  }
+  .main-text {
+    padding: 2vh;
+    font-size: 24px;
   }
 }
 @media (min-width: 768px) {
