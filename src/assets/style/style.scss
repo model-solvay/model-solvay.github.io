@@ -33,6 +33,15 @@ footer {
   background-size: cover;
 }
 
+.showcase {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8vh;
+  img {
+    height: 60vh;
+  }
+}
+
 #footer-content {
   margin-top: 20vh;
   padding-top: 5vh;
@@ -52,6 +61,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+
     a {
       text-decoration: none;
     }
@@ -59,11 +69,12 @@ footer {
 }
 
 footer .footimg {
-  > img {
+  >img {
     max-width: 95%;
     max-height: 40vh;
   }
 }
+
 #archive {
   margin-top: 10vh;
   display: flex;
@@ -213,7 +224,8 @@ footer .footimg {
     font-size: 40px;
   }
 
-  >i, span {
+  >i,
+  span {
     vertical-align: middle;
   }
 
@@ -221,6 +233,12 @@ footer .footimg {
 }
 
 @media (max-width: 768px) {
+
+  .showcase {
+    img {
+      width: 80vw;
+    }
+  }
 
   footer {
     flex-direction: column;

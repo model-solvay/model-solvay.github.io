@@ -33,6 +33,15 @@ footer {
   background-size: cover;
 }
 
+.showcase {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8vh;
+}
+.showcase img {
+  height: 60vh;
+}
+
 #footer-content {
   margin-top: 20vh;
   padding-top: 5vh;
@@ -188,11 +197,15 @@ footer .footimg > img {
 .social > i {
   font-size: 40px;
 }
-.social > i, .social span {
+.social > i,
+.social span {
   vertical-align: middle;
 }
 
 @media (max-width: 768px) {
+  .showcase img {
+    width: 80vw;
+  }
   footer {
     flex-direction: column;
   }
