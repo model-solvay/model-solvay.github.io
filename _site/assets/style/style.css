@@ -29,8 +29,6 @@ main {
 
 footer {
   background-image: url("/assets/img/star-scatter.svg");
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .showcase {
@@ -91,7 +89,8 @@ footer .footimg > img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--darkbgcol);
+  background-color: rgba(0, 0, 0, 0.1764705882);
+  backdrop-filter: blur(5px);
   color: var(--darktextcol);
   padding: 0 70px;
   position: fixed;
