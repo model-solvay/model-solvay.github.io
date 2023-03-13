@@ -7,7 +7,7 @@ when: Sun, Mar 13, 2023
 description: The general guidelines and rules to be followed by the participant for the main conference can be accessed here. Click to know more.
 ---
 
-The pdf version for this page can be accessed at [this link]("/docs/Rules.pdf").
+The pdf version for this page can be accessed at [this link](/docs/Rules.pdf).
 
 ------------------------------------------------------------------------
 
@@ -22,7 +22,7 @@ Following are the general guidelines and rules to be followed by the participant
 
 -   Participants are encouraged to explore all the relevant literature. Add all references used at the end of your submission document.
 
--   Last Date for submission of your solution through google form is **4th April 2023 by 23:59**. The submission will act as your registration for the **Prelims**. Kindly note that submissions only through [**Model Solvay Website**](https://model-solvay.github.io/) will be considered.
+-   Last Date for submission of your solution through google form is **4th April 2023 by 23:59**. The submission will act as your registration for the **Prelims**. Kindly note that submissions only through [**the form**](https://forms.gle/HtfJPDsmxP6b3ZJy9) will be considered.
 
 -   The results of the Prelims will be declared on **5th April**.
 
@@ -31,4 +31,3 @@ Following are the general guidelines and rules to be followed by the participant
 -   You are not supposed to solve all the problems, so do as much as you can and explore freely.
 
 -   For any queries feel free to contact at [**modelsolvay@gmail.com**](mailto:modelsolvay@gmail.com)
-4

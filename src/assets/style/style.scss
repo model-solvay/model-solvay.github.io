@@ -244,7 +244,8 @@ footer .footimg {
 
   transition: 0.5s;
 
-  width: fit-content;
+  // width: fit-content;
+  width: auto;
 
   &:hover {
     background-color: var(--darkbgcol);
@@ -317,6 +318,11 @@ footer .footimg {
 
       >.venue {
         font-style: italic;
+      }
+
+      >.post-name {
+        font-size: 28px;
+        font-weight: 900;
       }
     }
   }

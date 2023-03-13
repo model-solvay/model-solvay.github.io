@@ -205,7 +205,7 @@ footer .footimg > img {
   background-color: var(--accent-1);
   padding: 10px 15px;
   transition: 0.5s;
-  width: fit-content;
+  width: auto;
 }
 .btn-glow:hover {
   background-color: var(--darkbgcol);
@@ -286,6 +286,17 @@ footer .footimg > img {
 #announcement-container .announcement > .event-container > .venue,
 #announcement-container .announcement > .ann-head > .venue {
   font-style: italic;
+}
+#schedule-container > .date > .event-container > .post-name,
+#schedule-container > .date > .ann-head > .post-name,
+#schedule-container .announcement > .event-container > .post-name,
+#schedule-container .announcement > .ann-head > .post-name,
+#announcement-container > .date > .event-container > .post-name,
+#announcement-container > .date > .ann-head > .post-name,
+#announcement-container .announcement > .event-container > .post-name,
+#announcement-container .announcement > .ann-head > .post-name {
+  font-size: 28px;
+  font-weight: 900;
 }
 
 .floating {
