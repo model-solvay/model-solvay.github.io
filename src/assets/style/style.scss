@@ -379,8 +379,13 @@ footer .footimg {
   .navbar-toggle {
     display: block;
     position: fixed;
-    right: 20px;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
     transition: 0.5s;
+    background-color: var(--accent-1);
+    padding: 10px;
+    border-radius: 12px;
   }
 
   .navbar-toggle.active span:nth-child(2) {
