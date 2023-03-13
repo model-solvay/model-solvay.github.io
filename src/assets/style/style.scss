@@ -7,7 +7,19 @@
 :root {
   --darkbgcol: #000;
   --darktextcol: #fff;
-  --accent-1: #051d3f;
+  // --accent-1: #051d3f;
+  // --accent-2: #506c93;
+  // --accent-3: #1365d8;
+  --accent-1: #072786;
+  --accent-2: #1B399B;
+  --accent-3: #2543A7;
+  --accent-4: #2F4DB3;
+  --accent-5: #3555BD;
+  --accent-6: #576FC7;
+  --accent-7: #7689d0;
+  --accent-8: #9eaade;
+  --accent-9: #c4cbeb;
+  --accent-10: #e8ebf7;
 }
 
 body {
@@ -18,6 +30,10 @@ body {
 main {
   padding-top: 20vh;
   min-height: 70vh;
+}
+
+a {
+  color: var(--accent-7);
 }
 
 #welcome {
@@ -37,8 +53,33 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: 8vh;
+
   img {
     height: 60vh;
+  }
+
+  // #leftSidebar{
+  //   width: 50vw;
+  //   height: 100%;
+  //   background-image: url();
+  //   background-position: center right;
+  //  }
+
+  background-image: url('../img/bgs/ptv_trns.png'),
+  url('../img/bgs/neutron_star_trns.png');
+  background-repeat: repeat;
+  background-position: right bottom,
+  left top;
+  // background-size: cover;
+}
+
+.flex-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 80vw;
   }
 }
 
@@ -233,11 +274,52 @@ footer .footimg {
   // &:hover {}
 }
 
+
+// Schedule
+
+#schedule-container {
+  background-color: var(--accent-7);
+  margin: 10px 5vw;
+  border-radius: 12px;
+  padding: 10px;
+
+  >.date {
+    margin: 10px;
+    background-color: var(--accent-3);
+    border-radius: 10px;
+    padding: 5px;
+
+    >.event-container {
+      background-color: var(--accent-1);
+      display: flex;
+      justify-content: space-around;
+      border-radius: 8px;
+      font-size: 24px;
+      margin-bottom: 5px;
+
+      div:not(:last-child) {
+        border-right: 2px solid #ffffff42;
+      }
+
+      >.venue {
+        font-style: italic;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
 
   .showcase {
     img {
       width: 80vw;
+      height: unset;
+    }
+  }
+
+  .flex-img {
+    img {
+      width: 100vw;
     }
   }
 
@@ -312,6 +394,25 @@ footer .footimg {
     padding: 2vh;
     font-size: 24px;
   }
+
+  #schedule-container {
+    .event-container {
+      flex-direction: row;
+
+      >.event-date {
+        width: 32%;
+      }
+
+      >.event {
+        width: 35%;
+      }
+
+      >.venue {
+        width: 30%;
+        font-style: italic;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -326,6 +427,20 @@ footer .footimg {
 
   #div-3 {
     width: 30vw;
+  }
+
+  #schedule-container {
+    .event-date {
+      width: 20vw;
+    }
+
+    .event {
+      width: 30vw;
+    }
+
+    .venue {
+      width: 20vw;
+    }
   }
 }
 
