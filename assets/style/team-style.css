@@ -2,9 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 10vw;
 }
 #team-container > .team-element {
-  background-color: var(--accent-1);
+  background-color: var(--accent-3);
   border-radius: 12px;
   padding: 5px;
   margin: 10px;
@@ -14,6 +16,11 @@
   height: 50vh;
 }
 #team-container > .team-element > .details {
+  text-align: center;
+  font-size: 22px;
+}
+#team-container > .team-element > .post {
+  font-size: 20px;
   text-align: center;
 }
 

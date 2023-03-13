@@ -31,6 +31,7 @@ main {
 
 a {
   color: var(--accent-7);
+  text-decoration: none;
 }
 
 #welcome {
@@ -204,6 +205,7 @@ footer .footimg > img {
   background-color: var(--accent-1);
   padding: 10px 15px;
   transition: 0.5s;
+  width: fit-content;
 }
 .btn-glow:hover {
   background-color: var(--darkbgcol);
@@ -226,31 +228,72 @@ footer .footimg > img {
   vertical-align: middle;
 }
 
-#schedule-container {
+#schedule-container,
+#announcement-container {
   background-color: var(--accent-7);
   margin: 10px 5vw;
   border-radius: 12px;
   padding: 10px;
 }
-#schedule-container > .date {
+#schedule-container a,
+#announcement-container a {
+  text-decoration: none;
+}
+#schedule-container a .description,
+#announcement-container a .description {
+  color: var(--darktextcol);
+}
+#schedule-container > .date,
+#schedule-container .announcement,
+#announcement-container > .date,
+#announcement-container .announcement {
   margin: 10px;
   background-color: var(--accent-3);
   border-radius: 10px;
   padding: 5px;
+  font-size: 24px;
 }
-#schedule-container > .date > .event-container {
+#schedule-container > .date > .event-container,
+#schedule-container > .date > .ann-head,
+#schedule-container .announcement > .event-container,
+#schedule-container .announcement > .ann-head,
+#announcement-container > .date > .event-container,
+#announcement-container > .date > .ann-head,
+#announcement-container .announcement > .event-container,
+#announcement-container .announcement > .ann-head {
   background-color: var(--accent-1);
   display: flex;
   justify-content: space-around;
   border-radius: 8px;
-  font-size: 24px;
   margin-bottom: 5px;
 }
-#schedule-container > .date > .event-container div:not(:last-child) {
+#schedule-container > .date > .event-container div:not(:last-child),
+#schedule-container > .date > .ann-head div:not(:last-child),
+#schedule-container .announcement > .event-container div:not(:last-child),
+#schedule-container .announcement > .ann-head div:not(:last-child),
+#announcement-container > .date > .event-container div:not(:last-child),
+#announcement-container > .date > .ann-head div:not(:last-child),
+#announcement-container .announcement > .event-container div:not(:last-child),
+#announcement-container .announcement > .ann-head div:not(:last-child) {
   border-right: 2px solid rgba(255, 255, 255, 0.2588235294);
 }
-#schedule-container > .date > .event-container > .venue {
+#schedule-container > .date > .event-container > .venue,
+#schedule-container > .date > .ann-head > .venue,
+#schedule-container .announcement > .event-container > .venue,
+#schedule-container .announcement > .ann-head > .venue,
+#announcement-container > .date > .event-container > .venue,
+#announcement-container > .date > .ann-head > .venue,
+#announcement-container .announcement > .event-container > .venue,
+#announcement-container .announcement > .ann-head > .venue {
   font-style: italic;
+}
+
+.floating {
+  text-align: center;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -319,16 +362,36 @@ footer .footimg > img {
     padding: 2vh;
     font-size: 24px;
   }
-  #schedule-container .event-container {
+  #schedule-container .event-container,
+  #schedule-container .ann-head,
+  #announcement-container .event-container,
+  #announcement-container .ann-head {
     flex-direction: row;
   }
-  #schedule-container .event-container > .event-date {
+  #schedule-container .event-container > .event-date,
+  #schedule-container .event-container > .ann-date,
+  #schedule-container .ann-head > .event-date,
+  #schedule-container .ann-head > .ann-date,
+  #announcement-container .event-container > .event-date,
+  #announcement-container .event-container > .ann-date,
+  #announcement-container .ann-head > .event-date,
+  #announcement-container .ann-head > .ann-date {
     width: 32%;
   }
-  #schedule-container .event-container > .event {
+  #schedule-container .event-container > .event,
+  #schedule-container .event-container > .post-name,
+  #schedule-container .ann-head > .event,
+  #schedule-container .ann-head > .post-name,
+  #announcement-container .event-container > .event,
+  #announcement-container .event-container > .post-name,
+  #announcement-container .ann-head > .event,
+  #announcement-container .ann-head > .post-name {
     width: 35%;
   }
-  #schedule-container .event-container > .venue {
+  #schedule-container .event-container > .venue,
+  #schedule-container .ann-head > .venue,
+  #announcement-container .event-container > .venue,
+  #announcement-container .ann-head > .venue {
     width: 30%;
     font-style: italic;
   }
@@ -343,13 +406,20 @@ footer .footimg > img {
   #div-3 {
     width: 30vw;
   }
-  #schedule-container .event-date {
+  #schedule-container .event-date,
+  #schedule-container .ann-date,
+  #announcement-container .event-date,
+  #announcement-container .ann-date {
     width: 20vw;
   }
-  #schedule-container .event {
+  #schedule-container .event,
+  #schedule-container .post-name,
+  #announcement-container .event,
+  #announcement-container .post-name {
     width: 30vw;
   }
-  #schedule-container .venue {
+  #schedule-container .venue,
+  #announcement-container .venue {
     width: 20vw;
   }
 }
