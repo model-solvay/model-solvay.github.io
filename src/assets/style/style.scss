@@ -34,6 +34,7 @@ main {
 
 a {
   color: var(--accent-7);
+  text-decoration: none;
 }
 
 #welcome {
@@ -243,6 +244,8 @@ footer .footimg {
 
   transition: 0.5s;
 
+  width: fit-content;
+
   &:hover {
     background-color: var(--darkbgcol);
     filter: drop-shadow(0 0 12px var(--accent-1));
@@ -277,24 +280,35 @@ footer .footimg {
 
 // Schedule
 
-#schedule-container {
+#schedule-container,
+#announcement-container {
   background-color: var(--accent-7);
   margin: 10px 5vw;
   border-radius: 12px;
   padding: 10px;
 
-  >.date {
+  a {
+    text-decoration: none;
+
+    .description {
+      color: var(--darktextcol);
+    }
+  }
+
+  >.date,
+  .announcement {
     margin: 10px;
     background-color: var(--accent-3);
     border-radius: 10px;
     padding: 5px;
+    font-size: 24px;
 
-    >.event-container {
+    >.event-container,
+    >.ann-head {
       background-color: var(--accent-1);
       display: flex;
       justify-content: space-around;
       border-radius: 8px;
-      font-size: 24px;
       margin-bottom: 5px;
 
       div:not(:last-child) {
@@ -306,6 +320,14 @@ footer .footimg {
       }
     }
   }
+}
+
+.floating {
+  text-align: center;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -395,15 +417,20 @@ footer .footimg {
     font-size: 24px;
   }
 
-  #schedule-container {
-    .event-container {
+  #schedule-container,
+  #announcement-container {
+
+    .event-container,
+    .ann-head {
       flex-direction: row;
 
-      >.event-date {
+      >.event-date,
+      >.ann-date {
         width: 32%;
       }
 
-      >.event {
+      >.event,
+      >.post-name {
         width: 35%;
       }
 
@@ -429,12 +456,16 @@ footer .footimg {
     width: 30vw;
   }
 
-  #schedule-container {
-    .event-date {
+  #schedule-container,
+  #announcement-container {
+
+    .event-date,
+    .ann-date {
       width: 20vw;
     }
 
-    .event {
+    .event,
+    .post-name {
       width: 30vw;
     }
 

@@ -1,12 +1,13 @@
 const sass = require("sass");
 const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
+// const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/fonts");
     eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addPassthroughCopy("src/assets/img");
     eleventyConfig.addPassthroughCopy("src/icons");
+    eleventyConfig.addPassthroughCopy("src/docs");
 
     eleventyConfig.addTemplateFormats("scss");
 
@@ -50,20 +51,31 @@ module.exports = function (eleventyConfig) {
     });
 
     // Customize Markdown library and settings:
-    let markdownLibrary = markdownIt({
+    // let markdownLibrary = markdownIt({
+    //     html: true,
+    //     linkify: true,
+    // }).use(markdownItAnchor, {
+    //     permalink: markdownItAnchor.permalink.ariaHidden({
+    //         placement: "after",
+    //         class: "direct-link",
+    //         symbol: "#",
+    //         wrapper: 'div'
+    //     }),
+    //     level: [1, 2, 3, 4],
+    //     slugify: eleventyConfig.getFilter("slugify"),
+    // });
+    // let markdownLibrary = markdownIt({
+    //     html: true
+    // });
+    // eleventyConfig.setLibrary("md", markdownLibrary);
+
+    let options = {
         html: true,
-        linkify: true,
-    }).use(markdownItAnchor, {
-        permalink: markdownItAnchor.permalink.ariaHidden({
-            placement: "after",
-            class: "direct-link",
-            symbol: "#",
-            wrapper: 'div'
-        }),
-        level: [1, 2, 3, 4],
-        slugify: eleventyConfig.getFilter("slugify"),
-    });
-    eleventyConfig.setLibrary("md", markdownLibrary);
+        breaks: true,
+        linkify: true
+    };
+
+    eleventyConfig.setLibrary("md", markdownIt(options));
 
     eleventyConfig.addExtension("scss", {
         outputFileExtension: "css",
@@ -77,7 +89,7 @@ module.exports = function (eleventyConfig) {
 
     return {
         templateFormats: ["md", "njk", "html", "liquid"],
-        markdownTemplateEngine: "njk",
+        markdownTemplateEngine: "html",
         htmlTemplateEngine: "njk",
         dir: {
             input: "src/",

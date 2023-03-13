@@ -1,0 +1,25 @@
+img {
+    max-height: 60vh;
+    margin: 20px;
+}
+
+ul {
+    margin: 0 5vw;
+
+    li {}
+}
+
+// a {
+//     display: inline-block;
+//     margin: 0 5px;
+// }
+
+.tmpl-post {
+    >div {
+        margin: 0 10vw;
+    }
+}
+
+hr {
+    margin: 10px 0;
+}

@@ -3,16 +3,16 @@ layout: layouts/home.njk
 title: MSC 2023 - Announcements
 tags: main
 ---
-<div class="announcement-container">
-    {% for post in collections.announcement | reverse %}
-        <div class="announcement">
-            <div class="ann-head">
-                <a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a>
-                <time class="blogdate" datetime="{{ post.when }}">{{ post.data.when }}</time>
+<div id="announcement-container">
+    {% for post in collections.announcement %}
+        <a class="post-title" href="{{ post.url }}">
+            <div class="announcement">
+                <div class="ann-head">
+                    <div class="ann-date" datetime="{{ post.when }}">{{ post.data.when }}</div>
+                    <div class="post-name">{{ post.data.name }}</div>
+                </div>
+                <div class="description">{{ post.data.description }}</div>
             </div>
-            <div class="description">
-                {{ post.data.description }}
-            </div>
-        </div>
+        </a>
     {% endfor %}
 </div>

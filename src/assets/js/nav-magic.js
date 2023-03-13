@@ -11,7 +11,7 @@ window.addEventListener("scroll", () => {
     const navbar = document.querySelector(".navbar");
     const scrollTop = window.pageYOffset;
 
-    if (scrollTop > 400) {
+    if (scrollTop > 100) {
         navbar.classList.add("shrink");
         logoText.textContent = "MSC 2023";
     } else {
