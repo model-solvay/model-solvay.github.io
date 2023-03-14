@@ -255,7 +255,7 @@ footer .footimg > img {
   background-color: var(--accent-3);
   border-radius: 10px;
   padding: 5px;
-  font-size: 24px;
+  font-size: 21px;
 }
 #schedule-container > .date > .event-container,
 #schedule-container > .date > .ann-head,
@@ -299,7 +299,7 @@ footer .footimg > img {
 #announcement-container > .date > .ann-head > .post-name,
 #announcement-container .announcement > .event-container > .post-name,
 #announcement-container .announcement > .ann-head > .post-name {
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 900;
 }
 
@@ -353,6 +353,7 @@ footer .footimg > img {
     transform: rotate(-45deg) translate(5px, -5px);
   }
   .navbar-menu {
+    background-color: var(--darkbgcol);
     background-image: url("../img/nav-bg.jpg");
     background-size: cover;
   }

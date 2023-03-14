@@ -310,7 +310,7 @@ footer .footimg {
     background-color: var(--accent-3);
     border-radius: 10px;
     padding: 5px;
-    font-size: 24px;
+    font-size: 21px;
 
     >.event-container,
     >.ann-head {
@@ -329,7 +329,7 @@ footer .footimg {
       }
 
       >.post-name {
-        font-size: 28px;
+        font-size: 23px;
         font-weight: 900;
       }
     }
@@ -401,6 +401,7 @@ footer .footimg {
   }
 
   .navbar-menu {
+    background-color: var(--darkbgcol);
     background-image: url('../img/nav-bg.jpg');
     background-size: cover;
 
