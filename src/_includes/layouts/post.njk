@@ -3,8 +3,10 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 <link rel="stylesheet" href="{{ '/assets/style/post-style.css' | url }}">
+<div class="main-content">
 <h1>{{ title }}</h1>
 <div>{{ content | safe }}</div>
+</div>
 {%- if collections.announcement %}
     {%- set nextPost = collections.announcement | getNextCollectionItem(page) %}
     {%- set previousPost = collections.announcement | getPreviousCollectionItem(page) %}

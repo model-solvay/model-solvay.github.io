@@ -33,6 +33,11 @@ main {
   min-height: 70vh;
 }
 
+.main-content {
+  min-height: 50vh;
+  padding-bottom: 5vh;
+}
+
 a {
   color: var(--accent-7);
   text-decoration: none;
@@ -311,7 +316,24 @@ footer .footimg > img {
   margin: auto;
 }
 
+.navigate-post {
+  display: flex;
+  justify-content: space-evenly;
+}
+.navigate-post a {
+  border: 2px solid var(--accent-7);
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+figcaption {
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
+  figcaption {
+    padding: 15px;
+  }
   .showcase img {
     width: 80vw;
     height: unset;
