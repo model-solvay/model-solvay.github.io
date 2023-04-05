@@ -1,1 +1,1 @@
-# Official Website of the Model Solvay COnference 2023
+# Official Website of the Model Solvay Conference 2023
